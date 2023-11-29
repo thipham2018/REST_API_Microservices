@@ -1,0 +1,27 @@
+# port
+server:
+  port: 8080
+
+# db
+spring:
+  datasource:
+    url: jdbc:mysql://10.1.243.194:3306/ums
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: cfc118dbdcbc8d03e3ef
+            clientSecret: 0edc293b4e4db3d29374a1395ae90f078add1a3f
+            scope:
+              - user:email
+              - read:user
